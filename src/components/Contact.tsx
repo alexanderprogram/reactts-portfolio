@@ -3,8 +3,9 @@ function Contact() {
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="max-w-xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        <h2 className="text-4xl font-bold text-neutral-800 mb-16 text-center">
           Let's Connect
+          <div className="mt-2 w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full" />
         </h2>
         <form className="space-y-6">
           <div className="space-y-4">

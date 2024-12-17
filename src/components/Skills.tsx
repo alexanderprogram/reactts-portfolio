@@ -15,8 +15,9 @@ function Skills() {
   return (
     <section id="skills" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+        <h2 className="text-4xl font-bold text-neutral-800 mb-16 text-center">
           Skills & Technologies
+          <div className="mt-2 w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full" />
         </h2>
         <div className="grid md:grid-cols-3 gap-8">
           {skills.map((skillGroup) => (

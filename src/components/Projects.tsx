@@ -18,7 +18,10 @@ function Projects() {
   return (
     <section id="projects" className="py-20 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">My Projects</h2>
+        <h2 className="text-4xl font-bold text-neutral-800 mb-16 text-center">
+          My Projects
+          <div className="mt-2 w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full" />
+        </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
