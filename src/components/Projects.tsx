@@ -1,21 +1,28 @@
-// components/Projects.tsx
+// src/components/Projects.tsx
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { HiOutlineExternalLink } from "react-icons/hi";
+import gameWorthWizard from "../assets/images/gameworthwizard.png";
+import discoverLocalLore from "../assets/images/discoverlocallore.png";
 
 function Projects() {
   const { elementRef, isVisible } = useScrollAnimation();
 
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-featured online store built with React",
-      tech: ["React", "Node.js", "Tailwind"],
-      image: "https://placehold.co/600x400",
+      title: "Game Worth Wizard",
+      description:
+        "A platform for estimating gaming account values across popular titles like League of Legends, CS2, and Fortnite, featuring premium analytics and account tracking.",
+      tech: ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
+      image: gameWorthWizard,
+      link: "https://gameworthwizard.com",
     },
     {
-      title: "Social Media App",
-      description: "A modern social networking platform",
-      tech: ["React", "Firebase", "Tailwind"],
-      image: "https://placehold.co/600x400",
+      title: "Discover Local Lore",
+      description:
+        "A tourism platform connecting travelers with local tour guides, featuring custom tour creation, interactive maps, and secure payment processing.",
+      tech: ["React", "Firebase", "Node.js", "Google Maps API", "Stripe"],
+      image: discoverLocalLore,
+      link: "https://discoverlocallore.com",
     },
   ];
 
@@ -31,7 +38,7 @@ function Projects() {
             My Projects
             <div className="mt-2 w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full" />
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -42,18 +49,36 @@ function Projects() {
                   transitionDelay: `${index * 200}ms`,
                 }}
               >
-                <div className="relative overflow-hidden group">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block relative overflow-hidden group"
+                >
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <HiOutlineExternalLink className="w-10 h-10 text-white" />
+                  </div>
+                </a>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-neutral-800">
-                    {project.title}
-                  </h3>
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-xl font-semibold text-neutral-800">
+                      {project.title}
+                    </h3>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary-600 hover:text-primary-700"
+                    >
+                      <HiOutlineExternalLink className="w-5 h-5" />
+                    </a>
+                  </div>
                   <p className="text-neutral-600 mb-4">{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
