@@ -1,5 +1,5 @@
 // src/App.tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LoadingAnimation from "./components/LoadingAnimation";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -11,6 +11,16 @@ import Footer from "./components/Footer";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
+  const [contentVisible, setContentVisible] = useState(false);
+
+  useEffect(() => {
+    // Handle content visibility after loading
+    if (!isLoading) {
+      setTimeout(() => {
+        setContentVisible(true);
+      }, 100);
+    }
+  }, [isLoading]);
 
   return (
     <>
@@ -19,7 +29,7 @@ function App() {
       )}
       <div
         className={`min-h-screen bg-neutral-50 transition-opacity duration-500 
-        ${isLoading ? "opacity-0" : "opacity-100"}`}
+        ${contentVisible ? "opacity-100" : "opacity-0"}`}
       >
         <Navbar />
         <main>

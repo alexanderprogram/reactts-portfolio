@@ -28,6 +28,12 @@ export default {
           500: "#f59e0b", // Orange/yellow for CTAs
         },
       },
+      zIndex: {
+        9999: "9999",
+      },
+      transform: {
+        gpu: "translateZ(0)",
+      },
       animation: {
         "fade-in": "fadeIn 0.5s ease-in",
         "slide-up": "slideUp 0.5s ease-out",
@@ -35,8 +41,8 @@ export default {
         "slide-down": "slideDown 0.7s ease-out forwards",
         "width-grow": "widthGrow 0.7s ease-out forwards",
         pulse: "pulse 1s ease-in-out infinite",
-        "stroke-draw": "strokeDraw 2s ease-out forwards",
-        "fill-text": "fillText 1s ease-out forwards",
+        "stroke-draw": "strokeDraw 1.5s ease-out forwards",
+        "fill-text": "fillText 0.8s ease-out forwards",
       },
       keyframes: {
         fadeIn: {

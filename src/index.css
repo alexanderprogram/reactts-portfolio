@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom Scrollbar Styles */
+/* For Webkit browsers (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+  width: 8px; /* Made slightly thinner */
+}
+
+::-webkit-scrollbar-track {
+  background: #f8fafc; /* Changed to neutral-50 for subtlety */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1; /* Using a neutral gray color */
+  border-radius: 20px; /* Increased radius for smoother look */
+  border: 2px solid #f8fafc; /* Matching track color */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8; /* Subtle hover effect */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f8fafc; /* Using the same neutral colors */
+}
