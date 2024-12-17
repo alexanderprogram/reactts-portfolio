@@ -14,11 +14,8 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
     document.body.style.paddingRight = `${scrollBarWidth}px`;
     document.body.style.overflow = "hidden";
 
-    // Reduced total animation time from 3000ms to 2000ms
     const timer = setTimeout(() => {
       setIsAnimating(false);
-
-      // Reduced transition time from 800ms to 500ms
       setTimeout(() => {
         document.body.style.overflow = "";
         document.body.style.paddingRight = "";
@@ -38,7 +35,7 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
       className={`fixed inset-0 bg-gradient-to-br from-primary-50 to-primary-100 
         flex items-center justify-center z-[9999]
         ${isAnimating ? "opacity-100" : "opacity-0 pointer-events-none"}
-        transition-opacity duration-500`} // Reduced from duration-800
+        transition-opacity duration-500`}
     >
       <div className="relative transform-gpu">
         <svg
@@ -56,7 +53,7 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
             stroke="currentColor"
           >
             <tspan
-              className="text-primary-600 animate-[strokeDraw_1.5s_ease-out_forwards]" // Reduced from 2s
+              className="text-primary-600 animate-[strokeDraw_2s_ease-in-out_forwards]"
               strokeWidth="2"
               strokeDasharray="500"
               strokeDashoffset="500"
@@ -72,7 +69,7 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
             className="text-8xl md:text-9xl font-bold select-none"
           >
             <tspan
-              className="fill-primary-600 animate-[fillText_0.8s_ease-out_1.2s_forwards]" // Adjusted timing
+              className="fill-primary-600 animate-[fillText_1s_ease-in-out_1s_forwards]"
               fillOpacity="0"
             >
               TaskSoft
