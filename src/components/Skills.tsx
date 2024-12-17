@@ -1,5 +1,9 @@
 // src/components/Skills.tsx
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { BiCode } from "react-icons/bi";
+import { AiOutlineRobot } from "react-icons/ai";
+import { IoGameControllerOutline } from "react-icons/io5";
+import { BiData } from "react-icons/bi";
 
 function Skills() {
   const { elementRef, isVisible } = useScrollAnimation();
@@ -7,11 +11,7 @@ function Skills() {
   const skills = [
     {
       category: "Web & Mobile",
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M4 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm0 8a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm0 8a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z" />
-        </svg>
-      ),
+      icon: <BiCode className="w-8 h-8" />,
       items: [
         { name: "Python", proficiency: 90 },
         { name: "PHP", proficiency: 85 },
@@ -24,11 +24,7 @@ function Skills() {
     },
     {
       category: "AI & Data",
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 6.253v13h-1.25v-13H12zm1.25 13v-13h1.25v13H13.25zm-7.5-13v13H5.5v-13h.75zm11.25 13v-13h.75v13h-.75zM9.5 6.253v13H8.25v-13H9.5zm7.5 13v-13h.75v13h-.75z" />
-        </svg>
-      ),
+      icon: <AiOutlineRobot className="w-8 h-8" />,
       items: [
         { name: "Natural Language Processing", proficiency: 85 },
         { name: "OCR", proficiency: 80 },
@@ -39,11 +35,7 @@ function Skills() {
     },
     {
       category: "Game Development",
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4-3c-.83 0-1.5-.67-1.5-1.5S18.67 9 19.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" />
-        </svg>
-      ),
+      icon: <IoGameControllerOutline className="w-8 h-8" />,
       items: [
         { name: "Python (Godot)", proficiency: 85 },
         { name: "C# (Unity)", proficiency: 90 },
@@ -52,11 +44,7 @@ function Skills() {
     },
     {
       category: "Databases",
-      icon: (
-        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2C6.48 2 2 4.48 2 7.5v9C2 19.52 6.48 22 12 22s10-2.48 10-5.5v-9C22 4.48 17.52 2 12 2zm0 18c-4.42 0-8-1.79-8-4v-1.07c2.07 1.87 5.18 2.95 8 2.95s5.93-1.08 8-2.95V16c0 2.21-3.58 4-8 4zm0-6c-4.42 0-8-1.79-8-4v-1.07c2.07 1.87 5.18 2.95 8 2.95s5.93-1.08 8-2.95V10c0 2.21-3.58 4-8 4zm0-6c-4.42 0-8-1.79-8-4s3.58-4 8-4 8 1.79 8 4-3.58 4-8 4z" />
-        </svg>
-      ),
+      icon: <BiData className="w-8 h-8" />,
       items: [
         { name: "MySQL", proficiency: 90 },
         { name: "SQLite", proficiency: 85 },

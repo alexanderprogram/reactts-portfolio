@@ -1,8 +1,33 @@
-// components/About.tsx
+// src/components/About.tsx
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
+import { PiGraduationCapDuotone } from "react-icons/pi";
+import { MdOutlineBusinessCenter } from "react-icons/md";
+import { BiCodeAlt } from "react-icons/bi";
+import { HiOutlineArrowRight } from "react-icons/hi";
 
 function About() {
   const { elementRef, isVisible } = useScrollAnimation();
+
+  const aboutCards = [
+    {
+      title: "Education",
+      icon: <PiGraduationCapDuotone className="w-8 h-8" />,
+      description:
+        "First-generation college student at UT Austin, pursuing Economics with a Programming Certificate, complemented by Web Programming studies at ACC.",
+    },
+    {
+      title: "Experience",
+      icon: <MdOutlineBusinessCenter className="w-8 h-8" />,
+      description:
+        "Technology Apprentice at Emerson Electric Co., developing AI-driven solutions and VR interfaces with proven productivity improvements.",
+    },
+    {
+      title: "Expertise",
+      icon: <BiCodeAlt className="w-8 h-8" />,
+      description:
+        "Full-stack developer skilled in Python, JavaScript, React, and AI technologies, with a track record of building innovative solutions.",
+    },
+  ];
 
   return (
     <section
@@ -26,119 +51,32 @@ function About() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Education Card */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
-              <div className="mb-4 text-primary-600">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 14l9-5-9-5-9 5 9 5z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 14l9-5-9-5-9 5 9 5z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 14l9-5-9-5-9 5 9 5z"
-                  />
-                </svg>
+            {aboutCards.map((card, index) => (
+              <div
+                key={card.title}
+                className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100"
+                style={{
+                  transitionDelay: `${index * 100}ms`,
+                }}
+              >
+                <div className="mb-4 text-primary-600">{card.icon}</div>
+                <h3 className="text-xl font-semibold text-neutral-800 mb-3">
+                  {card.title}
+                </h3>
+                <p className="text-neutral-700 leading-relaxed">
+                  {card.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-neutral-800 mb-3">
-                Education
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                First-generation college student at UT Austin, pursuing
-                Economics with a Programming Certificate, complemented by Web
-                Programming studies at ACC.
-              </p>
-            </div>
-
-            {/* Experience Card */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
-              <div className="mb-4 text-primary-600">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-800 mb-3">
-                Experience
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                Technology Apprentice at Emerson Electric Co., developing
-                AI-driven solutions and VR interfaces with proven productivity
-                improvements.
-              </p>
-            </div>
-
-            {/* Skills Card */}
-            <div className="bg-white/80 backdrop-blur-sm p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary-100">
-              <div className="mb-4 text-primary-600">
-                <svg
-                  className="w-8 h-8"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-semibold text-neutral-800 mb-3">
-                Expertise
-              </h3>
-              <p className="text-neutral-700 leading-relaxed">
-                Full-stack developer skilled in Python, JavaScript, React, and
-                AI technologies, with a track record of building innovative
-                solutions.
-              </p>
-            </div>
+            ))}
           </div>
 
           <div className="mt-12 text-center">
             <a
               href="#contact"
-              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-300"
+              className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-300 group"
             >
               Let's Connect
-              <svg
-                className="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                />
-              </svg>
+              <HiOutlineArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
