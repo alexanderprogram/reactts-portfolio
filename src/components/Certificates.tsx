@@ -1,8 +1,9 @@
 // src/components/Certificates.tsx
 import { useScrollAnimation } from "../hooks/useScrollAnimation";
 import { HiOutlineExternalLink } from "react-icons/hi";
-import { SiMeta, SiUdemy, SiCoursera } from "react-icons/si";
-import { BsMicrosoft } from "react-icons/bs";
+import { IoSchoolOutline } from "react-icons/io5";
+import { FaUniversity } from "react-icons/fa";
+import { PiCertificateBold } from "react-icons/pi";
 
 interface Certificate {
   title: string;
@@ -19,38 +20,61 @@ function Certificates() {
 
   const certificates: Certificate[] = [
     {
-      title: "Full Stack Web Development",
-      issuer: "Meta",
+      title: "Web Developer Certificate",
+      issuer: "Austin Community College",
       date: "2024",
-      credentialLink: "https://example.com/credential/123",
-      badgeUrl: "https://placehold.co/150",
+      credentialLink: "#",
       skills: ["React", "Node.js", "MongoDB", "Express"],
-      icon: <SiMeta className="w-12 h-12" />,
+      icon: <PiCertificateBold className="w-12 h-12" />,
     },
     {
-      title: "Advanced TypeScript Development",
-      issuer: "Microsoft",
-      date: "2023",
-      credentialLink: "https://example.com/credential/456",
-      badgeUrl: "https://placehold.co/150",
-      skills: ["TypeScript", "Design Patterns", "Testing"],
-      icon: <BsMicrosoft className="w-12 h-12" />,
+      title: "Economics Bachelor's Degree",
+      issuer: "University of Texas at Austin",
+      date: "2024",
+      credentialLink: "#",
+      skills: [
+        "Data Analysis",
+        "Statistical Modeling",
+        "Economic Theory",
+        "Research Methods",
+      ],
+      icon: <FaUniversity className="w-12 h-12" />,
     },
     {
-      title: "AWS Cloud Architecture",
-      issuer: "Udemy",
-      date: "2023",
-      credentialLink: "https://example.com/credential/789",
-      skills: ["AWS", "Cloud Computing", "DevOps"],
-      icon: <SiUdemy className="w-12 h-12" />,
+      title: "Programming & Computation Certificate",
+      issuer: "University of Texas at Austin",
+      date: "2024",
+      credentialLink: "#",
+      skills: [
+        "Computational Analysis",
+        "Advanced Programming",
+        "Data Structures",
+      ],
+      icon: <FaUniversity className="w-12 h-12" />,
     },
     {
-      title: "Machine Learning Specialization",
-      issuer: "Coursera",
+      title: "General Studies Associate",
+      issuer: "Austin Community College",
       date: "2023",
-      credentialLink: "https://example.com/credential/101",
-      skills: ["Python", "TensorFlow", "Data Science"],
-      icon: <SiCoursera className="w-12 h-12" />,
+      credentialLink: "#",
+      skills: [
+        "Critical Thinking",
+        "Academic Writing",
+        "Interdisciplinary Studies",
+      ],
+      icon: <IoSchoolOutline className="w-12 h-12" />,
+    },
+    {
+      title: "Computer Programming Associate",
+      issuer: "Austin Community College",
+      date: "2023",
+      credentialLink: "#",
+      skills: [
+        "Software Development",
+        "Algorithm Design",
+        "Database Management",
+      ],
+      icon: <PiCertificateBold className="w-12 h-12" />,
     },
   ];
 
@@ -62,12 +86,12 @@ function Certificates() {
     >
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-neutral-800 mb-16 text-center">
-          Certifications
+          Education & Certifications
           <div className="mt-2 w-24 h-1 bg-gradient-to-r from-primary-400 to-primary-600 mx-auto rounded-full" />
         </h2>
 
         <div
-          className={`grid md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 ${
+          className={`grid md:grid-cols-2 gap-8 transition-all duration-700 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -111,7 +135,7 @@ function Certificates() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors group/link"
                   >
-                    <span>View Credential</span>
+                    <span>View Details</span>
                     <HiOutlineExternalLink className="w-4 h-4 ml-1 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                   </a>
                 </div>
