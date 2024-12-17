@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between h-16 items-center">
-          <span className="text-2xl font-bold text-blue-600">Portfolio</span>
+          <span className="text-2xl font-bold text-blue-600">TaskSoft</span>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
@@ -29,6 +29,12 @@ function Navbar() {
               className="text-gray-800 hover:text-blue-600 transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-blue-600 after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
             >
               Skills
+            </a>
+            <a
+              href="#certifications"
+              className="text-gray-800 hover:text-blue-600 transition-colors duration-300 relative after:content-[''] after:absolute after:w-full after:h-0.5 after:bg-blue-600 after:left-0 after:bottom-0 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-300"
+            >
+              Certifications
             </a>
             <a
               href="#contact"
