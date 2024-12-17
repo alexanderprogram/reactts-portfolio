@@ -15,11 +15,24 @@ function App() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
+    // Prevent scroll restoration on page load
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+
+    // Handle content visibility after loading
     if (!isLoading) {
       setTimeout(() => {
         setContentVisible(true);
       }, 100);
     }
+
+    return () => {
+      // Reset scroll restoration when component unmounts
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "auto";
+      }
+    };
   }, [isLoading]);
 
   return (
