@@ -14,7 +14,6 @@ function App() {
   const [contentVisible, setContentVisible] = useState(false);
 
   useEffect(() => {
-    // Handle content visibility after loading
     if (!isLoading) {
       setTimeout(() => {
         setContentVisible(true);
@@ -33,7 +32,7 @@ function App() {
       >
         <Navbar />
         <main>
-          <Hero />
+          <Hero isVisible={contentVisible} />
           <About />
           <Projects />
           <Skills />
