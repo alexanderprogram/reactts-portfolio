@@ -12,7 +12,7 @@ function Footer() {
           </div>
           <div className="flex space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/alexanderprogram"
               className="text-gray-400 hover:text-white transition"
               target="_blank"
               rel="noopener noreferrer"
@@ -20,25 +20,20 @@ function Footer() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/alex-l-18226b2ab/"
               className="text-gray-400 hover:text-white transition"
               target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
             </a>
-            <a
-              href="https://twitter.com"
-              className="text-gray-400 hover:text-white transition"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
           </div>
         </div>
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>
+            © {new Date().getFullYear()} Alexander Landaverde. All rights
+            reserved.
+          </p>
         </div>
       </div>
     </footer>
