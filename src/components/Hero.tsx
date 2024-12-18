@@ -1,5 +1,6 @@
 // src/components/Hero.tsx
 import { useEffect, useState } from "react";
+import alexImage from "/src/assets/images/Alexander-Landaverde.jpg";
 
 interface HeroProps {
   isVisible: boolean;
@@ -111,7 +112,7 @@ function Hero({ isVisible }: HeroProps) {
                              duration-300 shadow-xl relative z-10"
                 >
                   <img
-                    src="/src/assets/images/Alexander-Landaverde.jpg"
+                    src={alexImage}
                     alt="Alexander Landaverde - Full Stack Developer"
                     className="w-full h-full object-cover"
                   />
