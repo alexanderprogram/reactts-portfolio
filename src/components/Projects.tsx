@@ -12,7 +12,7 @@ function Projects() {
       title: "Game Worth Wizard",
       description:
         "A platform for estimating gaming account values across popular titles like League of Legends, CS2, and Fortnite, featuring premium analytics and account tracking.",
-      tech: ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
+      tech: ["React", "Node.js", "MongoDB", "Express", "JavaScript"],
       image: gameWorthWizard,
       link: "https://gameworthwizard.com",
     },
@@ -20,7 +20,7 @@ function Projects() {
       title: "Discover Local Lore",
       description:
         "A tourism platform connecting travelers with local tour guides, featuring custom tour creation, interactive maps, and secure payment processing.",
-      tech: ["React", "Firebase", "Node.js", "Google Maps API", "Stripe"],
+      tech: ["React", "MongoDB", "Node.js", "Google Maps API", "Express"],
       image: discoverLocalLore,
       link: "https://discoverlocallore.com",
     },
