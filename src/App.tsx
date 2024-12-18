@@ -1,5 +1,6 @@
 // src/App.tsx
 import { useState, useEffect } from "react";
+import Favicon from "./components/Favicon";
 import LoadingAnimation from "./components/LoadingAnimation";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
@@ -38,6 +39,7 @@ function App() {
 
   return (
     <>
+      <Favicon />
       {isLoading && (
         <LoadingAnimation onAnimationComplete={() => setIsLoading(false)} />
       )}
