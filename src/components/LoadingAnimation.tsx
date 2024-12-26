@@ -39,8 +39,8 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
     >
       <div className="relative transform-gpu">
         <svg
-          className="w-[400px] h-[120px] md:w-[600px] md:h-[160px]"
-          viewBox="0 0 600 160"
+          className="w-[500px] h-[120px] md:w-[800px] md:h-[160px]"
+          viewBox="0 0 800 160"
           aria-label="TaskSoft Logo Animation"
         >
           <text
@@ -58,7 +58,7 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
               strokeDasharray="500"
               strokeDashoffset="500"
             >
-              TaskSoft
+              Alexander
             </tspan>
           </text>
           <text
@@ -72,7 +72,7 @@ function LoadingAnimation({ onAnimationComplete }: LoadingAnimationProps) {
               className="fill-primary-600 animate-[fillText_1s_ease-in-out_1s_forwards]"
               fillOpacity="0"
             >
-              TaskSoft
+              Alexander
             </tspan>
           </text>
         </svg>
